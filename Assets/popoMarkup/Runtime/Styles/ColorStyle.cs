@@ -8,5 +8,10 @@ namespace JuhaKurisu.PopoTools.Markup
         {
             this.color = color;
         }
+
+        public override string ToString(string text)
+        {
+            return $"<color=#{color.ToColorCode()}>{text}</color>";
+        }
     }
 }
