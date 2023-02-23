@@ -3,6 +3,8 @@ namespace JuhaKurisu.PopoTools.Markup
     public abstract class Style
     {
         public readonly static BoldStyle bold = new BoldStyle();
+        public readonly static ItalicStyle italic = new ItalicStyle();
+
         public MarkupString this[string t]
         {
             get => new MarkupString().AddText(t, this);
@@ -13,6 +15,10 @@ namespace JuhaKurisu.PopoTools.Markup
 
         public static BoldStyle Bold()
             => bold;
+
+        public static ItalicStyle Italic()
+            => italic;
+
 
     }
 }
