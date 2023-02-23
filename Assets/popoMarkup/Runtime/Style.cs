@@ -22,6 +22,9 @@ namespace JuhaKurisu.PopoTools.Markup
         public static ColorStyle Color(System.Drawing.Color color)
             => new ColorStyle(MarkupColor.FromSystemColor(color));
 
+        public static ColorStyle Color(byte r = 255, byte g = 255, byte b = 255, byte a = 255)
+            => new ColorStyle(new MarkupColor(r, g, b, a));
+
         public static BoldStyle Bold()
             => bold;
 
