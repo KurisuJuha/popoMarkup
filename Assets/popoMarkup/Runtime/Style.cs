@@ -20,5 +20,8 @@ namespace JuhaKurisu.PopoTools.Markup
             => italic;
 
 
+        public static MarkupString operator +(Style style, string text)
+            => new MarkupString().AddText(text, style);
+
     }
 }
