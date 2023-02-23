@@ -25,6 +25,9 @@ namespace JuhaKurisu.PopoTools.Markup
         public static ColorStyle Color(byte r = 255, byte g = 255, byte b = 255, byte a = 255)
             => new ColorStyle(new MarkupColor(r, g, b, a));
 
+        public static ColorStyle Color(MarkupColor color)
+            => new ColorStyle(color);
+
         public static BoldStyle Bold()
             => bold;
 
