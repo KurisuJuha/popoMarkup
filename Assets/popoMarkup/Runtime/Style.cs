@@ -19,6 +19,9 @@ namespace JuhaKurisu.PopoTools.Markup
         public static ColorStyle Color(UnityEngine.Color32 color)
             => new ColorStyle(MarkupColor.FromUnityColor32(color));
 
+        public static ColorStyle Color(System.Drawing.Color color)
+            => new ColorStyle(MarkupColor.FromSystemColor(color));
+
         public static BoldStyle Bold()
             => bold;
 
