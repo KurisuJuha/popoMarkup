@@ -9,5 +9,11 @@ namespace JuhaKurisu.PopoTools.Markup
         public ReadOnlyCollection<(string, List<Style>)> styleTexts => styleTextList.AsReadOnly();
         private List<(string text, List<Style> styles)> styleTextList = new List<(string, List<Style>)>();
 
+        public MarkupString AddText(string text, Style style)
+        {
+            styleTextList.Add((text, new List<Style>() { style }));
+            return this;
+        }
+
     }
 }
