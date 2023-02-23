@@ -22,5 +22,10 @@ namespace JuhaKurisu.PopoTools.Markup
             styleTextList.Last().styles.Add(style);
             return this;
         }
+        public static MarkupString operator +(MarkupString a, MarkupString b)
+        {
+            a.styleTextList.AddRange(b.styleTextList);
+            return a;
+        }
     }
 }
