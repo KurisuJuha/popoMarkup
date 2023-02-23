@@ -13,6 +13,9 @@ namespace JuhaKurisu.PopoTools.Markup
         public virtual string ToString(string text)
             => text;
 
+        public static ColorStyle Color(UnityEngine.Color color)
+            => new ColorStyle(MarkupColor.FromUnityColor(color));
+
         public static BoldStyle Bold()
             => bold;
 
