@@ -15,5 +15,12 @@ namespace JuhaKurisu.PopoTools.Markup
             return this;
         }
 
+        public MarkupString AddStyle(Style style)
+        {
+            if (styleTextList.Count == 0) return this;
+
+            styleTextList.Last().styles.Add(style);
+            return this;
+        }
     }
 }
