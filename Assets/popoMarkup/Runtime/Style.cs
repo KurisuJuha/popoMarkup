@@ -26,5 +26,8 @@ namespace JuhaKurisu.PopoTools.Markup
         public static MarkupString operator +(string text, Style style)
             => new MarkupString().AddText(text, style);
 
+        public static MarkupString operator +(MarkupString text, Style style)
+            => text.AddStyle(style);
+
     }
 }
