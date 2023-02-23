@@ -27,5 +27,7 @@ namespace JuhaKurisu.PopoTools.Markup
         public static MarkupColor FromUnityColor32(UnityEngine.Color32 color)
             => new MarkupColor(color.r, color.g, color.b, color.a);
 
+        public static MarkupColor FromSystemColor(System.Drawing.Color color)
+            => new MarkupColor(color.R, color.G, color.B, color.A);
     }
 }
