@@ -17,5 +17,8 @@ namespace JuhaKurisu.PopoTools.Markup
 
         public static MarkupColor Rgb(byte r = 0, byte g = 0, byte b = 0)
             => new MarkupColor(r, g, b, 255);
+
+        public static MarkupColor Rgba(byte r = 0, byte g = 0, byte b = 0, byte a = 255)
+            => new MarkupColor(r, g, b, a);
     }
 }
