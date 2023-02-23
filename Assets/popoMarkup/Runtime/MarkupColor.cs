@@ -1,3 +1,5 @@
+using System;
+
 namespace JuhaKurisu.PopoTools.Markup
 {
     public class MarkupColor
@@ -15,6 +17,13 @@ namespace JuhaKurisu.PopoTools.Markup
             this.a = a;
         }
 
+        public string ToColorCode()
+        {
+            return BitConverter.ToString(new byte[] { r })
+                 + BitConverter.ToString(new byte[] { g })
+                 + BitConverter.ToString(new byte[] { b })
+                 + BitConverter.ToString(new byte[] { a });
+        }
 
         public static MarkupColor FromUnityColor(UnityEngine.Color color)
             => new MarkupColor((byte)(color.r * 255), (byte)(color.g * 255), (byte)(color.b * 255), (byte)(color.a * 255));
